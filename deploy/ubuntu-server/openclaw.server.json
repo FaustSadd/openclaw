@@ -27,7 +27,7 @@
     defaults: {
       workspace: "~/.openclaw/workspace",
       model: {
-        primary: "deepseek/deepseek-chat",
+        primary: "openrouter/deepseek-chat",
       },
       thinkingDefault: "low",
       verboseDefault: "off",

@@ -24,15 +24,17 @@ For your current plan, fill at least:
 
 ```env
 OPENCLAW_GATEWAY_TOKEN=your-long-random-token
-DEEPSEEK_API_KEY=your-deepseek-api-key
+OPENROUTER_API_KEY=your-openrouter-api-key
 ```
+
+This template is set up for DeepSeek through OpenRouter.
 
 If you switch providers later, use the matching env var instead:
 
 - `OPENAI_API_KEY`
 - `ANTHROPIC_API_KEY`
 - `GEMINI_API_KEY`
-- `OPENROUTER_API_KEY`
+- `DEEPSEEK_API_KEY`
 
 ## Recommended server setup
 
@@ -96,3 +98,4 @@ Authenticate with `OPENCLAW_GATEWAY_TOKEN`.
 - Keep `gateway.bind: "loopback"` unless you deliberately deploy behind a trusted reverse proxy or tailnet setup.
 - Add channels only after the base gateway is healthy.
 - If you later need Telegram or Discord, add the token to `~/.openclaw/.env` and then add the matching channel block in `~/.openclaw/openclaw.json`.
+- The default model in `openclaw.server.json` is `openrouter/deepseek-chat`.
