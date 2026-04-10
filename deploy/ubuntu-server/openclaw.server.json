@@ -1,0 +1,39 @@
+{
+  // Minimal server-ready OpenClaw config for a remote Ubuntu gateway.
+  // Keep secrets in ~/.openclaw/.env, not in this file.
+
+  gateway: {
+    mode: "local",
+    bind: "loopback",
+    port: 18789,
+    auth: {
+      mode: "token",
+    },
+  },
+
+  identity: {
+    name: "OpenClaw",
+    theme: "helpful remote assistant",
+  },
+
+  logging: {
+    level: "info",
+    consoleLevel: "info",
+    consoleStyle: "pretty",
+    redactSensitive: "tools",
+  },
+
+  agents: {
+    defaults: {
+      workspace: "~/.openclaw/workspace",
+      model: {
+        primary: "deepseek/deepseek-chat",
+      },
+      thinkingDefault: "low",
+      verboseDefault: "off",
+    },
+  },
+
+  // Start without channels enabled. Add them one by one after the gateway is up.
+  channels: {},
+}
